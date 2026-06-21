@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* App-level overrides — kept minimal since Tailwind handles styling */
+a{
+  text-decoration: none;
+}
+
+

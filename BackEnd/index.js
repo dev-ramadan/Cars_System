@@ -3,6 +3,7 @@ import cors from "cors";
 import bootstrap from "./src/app.controller.js"
 const app = express()
 app.use(cors());
+await bootstrap(app, express);
 app.get("/", (req, res) => {
     res.send("Server is running ... 🚀");
 });

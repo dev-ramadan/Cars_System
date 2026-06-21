@@ -4,7 +4,9 @@ import pg from "pg";
 
 dotenv.config();
 
-export const sequelize = new Sequelize(process.env.DB_URL, {
+const dbUrl = process.env.DB_URL || "postgres://localhost:5432/dummy";
+
+export const sequelize = new Sequelize(dbUrl, {
   dialect: "postgres",
   dialectModule: pg,
   protocol: "postgres",
